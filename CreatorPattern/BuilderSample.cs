@@ -1,3 +1,9 @@
+/*
+The Builder pattern is used to construct complex objects step by step. Imagine you are assembling a sandwich
+at a deli. First, you choose the bread, then the meat, the vegetables, the cheese, and the sauces. You can
+assemble different types of sandwiches using the same process, just by changing the ingredients. The Builder
+separates the construction (assembling the sandwich) from the representation (the specific type of sandwich).
+*/
 namespace DesignPatternsSamples.CreatorPattern;
 
 // Product (the sandwich) with many parts

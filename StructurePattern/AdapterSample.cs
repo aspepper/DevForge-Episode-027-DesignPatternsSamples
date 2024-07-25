@@ -1,3 +1,9 @@
+/*
+The Adapter pattern is like a power plug adapter. Imagine you bought an electronic device in the United States,
+but it has a different plug than the one used in Brazil. To use this device, you need an adapter that converts
+the US plug to the Brazilian standard. Similarly, the Adapter pattern converts the interface of a class into
+another interface that the client expects.
+*/
 namespace DesignPatternsSamples.StructurePattern;
 
 // Interface expected by the client (Brazilian power outlet standard)
@@ -15,7 +21,9 @@ public class Adaptee
 // Adapter that does the conversion (power outlet adapter)
 public class Adapter : ITarget
 {
-    private Adaptee adaptee = new(); // Instance of the class with the different interface
+    // Instance of the class with the different interface
+    private Adaptee adaptee = new(); 
 
-    public void Request() => adaptee.SpecificRequest(); // Converts the call to the expected interface
+    // Converts the call to the expected interface
+    public void Request() => adaptee.SpecificRequest();
 }

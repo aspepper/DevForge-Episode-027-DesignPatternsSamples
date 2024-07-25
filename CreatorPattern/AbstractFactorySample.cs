@@ -1,3 +1,10 @@
+/*
+The Abstract Factory pattern is like a factory that can create various related things. Imagine you have a furniture
+factory that can make both chairs and tables. Depending on the specific factory, you can create a modern furniture
+set or a classic furniture set. The Abstract Factory provides an interface (a blueprint) for creating these families
+of related objects (like chairs and tables) without specifying exactly which concrete classes (specific types) will
+be created.
+*/
 namespace DesignPatternsSamples.CreatorPattern;
 
 // We define an interface for the Abstract Factory (the furniture factory)

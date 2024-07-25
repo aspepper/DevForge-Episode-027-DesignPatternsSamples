@@ -18,7 +18,7 @@ public class RealSubject : ISubject
 // Implementation of the Proxy (the gate)
 public class Proxy : ISubject
 {
-    private RealSubject realSubject;
+    private RealSubject? realSubject;
 
     public void Request()
     {
