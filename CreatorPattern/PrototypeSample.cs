@@ -9,7 +9,8 @@ namespace DesignPatternsSamples.CreatorPattern;
 // Interface that defines the Clone method (to copy the object)
 public interface IPrototype
 {
-    IPrototype Clone(); // Method to clone the object
+    // Method to clone the object
+    IPrototype Clone(); 
 }
 
 // Concrete class that implements the Clone method
@@ -20,5 +21,6 @@ public class ConcretePrototype : IPrototype
 
     public IPrototype Clone()
         // Creates a copy of the object
-        => new ConcretePrototype { Id = this.Id, Name = this.Name }; 
+        => new ConcretePrototype 
+        { Id = this.Id, Name = this.Name }; 
 }

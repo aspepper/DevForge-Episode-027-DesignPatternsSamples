@@ -15,9 +15,14 @@ public class Product
 // Builder Interface (the plan to build the sandwich)
 public interface IBuilder
 {
-    void BuildPartA(); // Method to add a part (e.g., bread)
-    void BuildPartB(); // Method to add another part (e.g., meat)
-    Product GetResult(); // Method to get the finished sandwich
+    // Method to add a part (e.g., bread)
+    void BuildPartA();
+
+    // Method to add another part (e.g., meat) 
+    void BuildPartB();
+
+    // Method to get the finished sandwich
+    Product GetResult(); 
 }
 
 // Concrete Builder (knows how to build the sandwich)
@@ -25,7 +30,12 @@ public class ConcreteBuilder : IBuilder
 {
     private Product product = new Product();
 
-    public void BuildPartA() { /* Adds the bread */ }
-    public void BuildPartB() { /* Adds the meat */ }
-    public Product GetResult() => product; // Returns the finished sandwich
+    public void BuildPartA() 
+    { /* Adds the bread */ }
+    
+    public void BuildPartB() 
+    { /* Adds the meat */ }
+
+    // Returns the finished sandwich
+    public Product GetResult() => product; 
 }

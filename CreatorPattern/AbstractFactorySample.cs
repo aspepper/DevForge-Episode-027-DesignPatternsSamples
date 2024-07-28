@@ -10,8 +10,11 @@ namespace DesignPatternsSamples.CreatorPattern;
 // We define an interface for the Abstract Factory (the furniture factory)
 public interface IAbstractFactory
 {
-    IProductA CreateProductA(); // Method to create a chair
-    IProductB CreateProductB(); // Method to create a table
+    // Method to create a chair
+    IProductA CreateProductA();
+
+    // Method to create a table
+    IProductB CreateProductB(); 
 }
 
 // Here is an interface for Product A (chair)
@@ -47,6 +50,9 @@ public class ProductB1 : IProductB
 // This is a concrete factory that creates modern furniture
 public class ConcreteFactory1 : IAbstractFactory
 {
-    public IProductA CreateProductA() => new ProductA1(); // Creates a modern chair
-    public IProductB CreateProductB() => new ProductB1(); // Creates a modern table
+    // Creates a modern chair
+    public IProductA CreateProductA() => new ProductA1();
+    
+    // Creates a modern table
+    public IProductB CreateProductB() => new ProductB1(); 
 }
