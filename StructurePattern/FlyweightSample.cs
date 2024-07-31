@@ -1,4 +1,9 @@
-﻿namespace DesignPatternsSamples.StructurePattern;
+﻿/* 
+The Flyweight pattern minimizes memory usage by sharing as much 
+data as possible among similar objects. It is useful in situations 
+where many similar objects are needed.
+ */
+namespace DesignPatternsSamples.StructurePattern;
 
 // Flyweight interface for the chess piece
 public interface IChessPiece
@@ -7,14 +12,9 @@ public interface IChessPiece
 }
 
 // Concrete implementation of the chess piece
-public class ChessPiece : IChessPiece
+public class ChessPiece(string pieceType) : IChessPiece
 {
-    private string pieceType;
-
-    public ChessPiece(string pieceType)
-    {
-        this.pieceType = pieceType;
-    }
+    private readonly string pieceType = pieceType;
 
     public void Move(int x, int y)
     {
@@ -25,7 +25,7 @@ public class ChessPiece : IChessPiece
 // Flyweight Factory that creates and manages chess piece objects
 public class ChessPieceFactory
 {
-    private Dictionary<string, IChessPiece> pieces = new Dictionary<string, IChessPiece>();
+    private readonly Dictionary<string, IChessPiece> pieces = [];
 
     public IChessPiece GetChessPiece(string pieceType)
     {

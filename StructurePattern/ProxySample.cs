@@ -1,4 +1,9 @@
-﻿namespace DesignPatternsSamples.StructurePattern;
+﻿/* 
+The Proxy pattern provides a substitute or access point for another 
+object to control access to it. It is useful for controlling, modifying, 
+or managing access to an object in various ways.
+*/
+namespace DesignPatternsSamples.StructurePattern;
 
 // Subject interface that defines the Request method
 public interface ISubject
@@ -22,10 +27,7 @@ public class Proxy : ISubject
 
     public void Request()
     {
-        if (realSubject == null)
-        {
-            realSubject = new RealSubject();
-        }
+        realSubject ??= new RealSubject();
         Console.WriteLine("Request handled by Proxy");
         realSubject.Request();
     }

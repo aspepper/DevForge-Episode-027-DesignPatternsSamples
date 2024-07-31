@@ -1,30 +1,41 @@
-﻿namespace DesignPatternsSamples.StructurePattern;
+﻿/* 
+The Decorator pattern allows you to add responsibilities to objects 
+in a flexible and dynamic way, without modifying their basic structure.
+ */
+namespace DesignPatternsSamples.StructurePattern;
 
 // Abstract class Component (base class for all components)
-public abstract class Component
+public abstract class ComponentDecorator
 {
-    public abstract void Operation(); // Abstract method to be implemented by concrete components
+    // Abstract method to be implemented by concrete components
+    public abstract void Operation();
 }
 
 // Concrete implementation of a Component
-public class ConcreteComponent : Component
+public class ConcreteComponent : ComponentDecorator
 {
-    public override void Operation() { /* Implementation of the operation */ }
+    public override void Operation() 
+    { 
+        /* Implementation of the operation */ 
+    }
 }
 
 // Abstract class Decorator that also inherits from Component
-public abstract class Decorator : Component
+public abstract class Decorator : ComponentDecorator
 {
-    protected Component? component; // Holds a reference to a Component
+    // Holds a reference to a Component
+    protected ComponentDecorator? component; 
 
-    public void SetComponent(Component component)
+    public void SetComponent(ComponentDecorator component)
     {
-        this.component = component; // Sets the component to be decorated
+        // Sets the component to be decorated
+        this.component = component; 
     }
 
     public override void Operation()
     {
-        component?.Operation(); // Calls the operation of the component, if it exists
+        // Calls the operation of the component, if it exists
+        component?.Operation(); 
     }
 }
 
@@ -33,8 +44,8 @@ public class ConcreteDecoratorA : Decorator
 {
     public override void Operation()
     {
-        base.Operation(); // Calls the operation of the decorated component
+        // Calls the operation of the decorated component
+        base.Operation(); 
         // Add additional behavior.
     }
 }
-
