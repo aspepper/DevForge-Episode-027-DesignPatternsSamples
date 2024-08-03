@@ -22,14 +22,9 @@ public class ConcreteImplementorA : IImplementor
 }
 
 // Abstraction (the remote control itself)
-public class Abstraction
+public class Abstraction(IImplementor implementor)
 {
-    protected IImplementor implementor;
-
-    public Abstraction(IImplementor implementor)
-    {
-        this.implementor = implementor;
-    }
+    protected IImplementor implementor = implementor;
 
     public void Operation()
     {

@@ -25,5 +25,6 @@ public class Adapter : ITarget
     private Adaptee adaptee = new(); 
 
     // Converts the call to the expected interface
-    public void Request() => adaptee.SpecificRequest();
+    public void Request() 
+        => adaptee.SpecificRequest();
 }
