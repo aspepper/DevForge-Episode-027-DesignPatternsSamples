@@ -1,4 +1,10 @@
-﻿namespace DesignPatternsSamples.ComportamentalPattern;
+﻿/*
+The Mediator pattern defines an object that encapsulates
+how a set of objects interacts. Think of it as a theater
+director who coordinates the interaction between actors
+without them interacting directly with each other.
+*/
+namespace DesignPatternsSamples.ComportamentalPattern;
 
 // Mediator interface
 public interface IMediator

@@ -1,4 +1,10 @@
-﻿namespace DesignPatternsSamples.ComportamentalPattern;
+﻿/*
+The State pattern allows an object to change its behavior
+when its internal state changes. Think of it as a vending
+machine that behaves differently depending on whether you
+have inserted money or not.
+*/
+namespace DesignPatternsSamples.ComportamentalPattern;
 
 // State interface
 public interface IState

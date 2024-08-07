@@ -1,4 +1,11 @@
-﻿namespace DesignPatternsSamples.ComportamentalPattern;
+﻿/*
+The Visitor pattern allows you to define a new operation
+without changing the classes of the elements on which it
+operates. Think of it as a tour guide who can explain
+different parts of a museum without altering the museum
+exhibits.
+*/
+namespace DesignPatternsSamples.ComportamentalPattern;
 
 // Visitor interface
 public interface IVisitor

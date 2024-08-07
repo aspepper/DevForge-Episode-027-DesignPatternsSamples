@@ -1,4 +1,10 @@
-﻿namespace DesignPatternsSamples.ComportamentalPattern;
+﻿/*
+The Strategy pattern defines a family of algorithms, encapsulates
+each one, and makes them interchangeable. Imagine you are playing
+a racing game and can choose different strategies to win, such as
+driving fast, driving defensively, or avoiding obstacles.
+*/
+namespace DesignPatternsSamples.ComportamentalPattern;
 
 // Strategy interface that defines the algorithm interface
 public interface IStrategy
@@ -18,7 +24,7 @@ public class ConcreteStrategyA : IStrategy
 // Context class that uses a strategy
 public class ContextStrategy(IStrategy strategy)
 {
-    private IStrategy strategy = strategy;
+    private readonly IStrategy strategy = strategy;
 
     public void ContextInterface()
     {

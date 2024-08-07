@@ -1,4 +1,11 @@
-﻿namespace DesignPatternsSamples.ComportamentalPattern;
+﻿/*
+The Iterator pattern provides a way to sequentially access
+the elements of an aggregate object without exposing its
+underlying representation. Imagine you are listening to a
+music playlist and can skip forward or backward to the next
+song without knowing exactly how the list is stored.
+*/
+namespace DesignPatternsSamples.ComportamentalPattern;
 
 // Iterator interface
 public interface IIterator
