@@ -42,7 +42,7 @@ public interface IAggregate
 // Concrete aggregate class
 public class ConcreteAggregate : IAggregate
 {
-    private List<object> items = [];
+    private readonly List<object> items = [];
 
     public IIterator CreateIterator()
     {
