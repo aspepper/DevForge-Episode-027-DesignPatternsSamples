@@ -17,7 +17,7 @@ public interface IIterator
 // Concrete iterator class
 public class ConcreteIterator(List<object> collection) : IIterator
 {
-    private List<object> collection = collection;
+    private readonly List<object> collection = collection;
     private int position = 0;
 
     public bool HasNext()
@@ -27,8 +27,9 @@ public class ConcreteIterator(List<object> collection) : IIterator
 
     public object Next()
     {
-        if (!HasNext()) return null;
-        return collection[position++];
+        object result = string.Empty;
+        if (HasNext()) result = collection[position++];
+        return result;
     }
 }
 

@@ -13,7 +13,7 @@ public interface IStrategy
 }
 
 // Concrete strategy that implements a specific algorithm
-public class ConcreteStrategyA : IStrategy
+public class ConcreteStrategy : IStrategy
 {
     public void AlgorithmInterface()
     {
