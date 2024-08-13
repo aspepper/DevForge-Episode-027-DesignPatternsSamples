@@ -26,7 +26,10 @@ public abstract class AbstractClass
 // Concrete class that implements the steps
 public class ConcreteClass : AbstractClass
 {
-    protected override void StepOne() { /* Implementation of step one */ }
-    protected override void StepTwo() { /* Implementation of step two */ }
-    protected override void StepThree() { /* Implementation of step three */ }
+    protected override void StepOne() 
+    { /* Implementation of step one */ }
+    protected override void StepTwo() 
+    { /* Implementation of step two */ }
+    protected override void StepThree() 
+    { /* Implementation of step three */ }
 }

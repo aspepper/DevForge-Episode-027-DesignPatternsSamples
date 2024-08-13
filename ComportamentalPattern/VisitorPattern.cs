@@ -21,7 +21,6 @@ public class ConcreteVisitor : IVisitor
     {
         Console.WriteLine("Visiting ElementA");
     }
-
     public void Visit(ElementB element)
     {
         Console.WriteLine("Visiting ElementB");
